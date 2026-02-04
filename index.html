@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upward — Growth Consulting & Creative Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --muted: #b5b5b5;
+      --accent: #d8ff3f; /* logo yellow */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding-top: 120px;
+    }
+
+    .hero-title {
+      font-size: 3.4rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+          
+    
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .cta {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #333;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-whatsapp {
+      background: #0b0b0b;
+      border: 1px solid #1f1f1f;
+    }
+
+    .btn-whatsapp:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent);
+      color: #000;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+    }
+
+    /* SECTION */
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    section p.lead {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 60px;
+    }
+
+    /* SERVICES */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      border: 1px solid #1f1f1f;
+      padding: 30px;
+      border-radius: 20px;
+      background: #050505;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+
+    .card ul {
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    /* PROCESS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .step {
+      padding: 25px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .step span {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* CTA BOTTOM */
+    .final-cta {
+      text-align: center;
+      border: 1px solid #1f1f1f;
+      border-radius: 30px;
+      padding: 80px 40px;
+      background: linear-gradient(180deg, #050505, #000);
+    }
+
+    .contact-form {
+      max-width: 520px;
+      margin: 40px auto 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #222;
+      background: #0b0b0b;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .contact-form button {
+      margin-top: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-logo {
+      height: 64px;
+      margin-top: 16px;
+    }
+
+    .footer-logo {
+      height: 36px;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="container hero">
+    <h1 class="hero-title">Take your business<br><img src="./upward-logo.png" alt="Upward logo" class="hero-logo" /></h1>
+
+    <p>We are a growth consulting and creative agency helping local and small businesses scale with strategy, clarity, and high-impact creative.</p>
+    <div class="cta">
+      <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+      
+    </div>
+  </div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <section class="container">
+    <h2>Growth Meets Creative Execution</h2>
+    <p class="lead">We align business strategy with creative execution to build brands that don’t just look good — they grow.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Growth & Strategy</h3>
+        <ul>
+          <li>Business & Growth Audits</li>
+          <li>Market Positioning</li>
+          <li>Customer Acquisition Strategy</li>
+          <li>Conversion Optimization</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Branding & Creative</h3>
+        <ul>
+          <li>Brand Identity</li>
+          <li>Creative Direction</li>
+          <li>Content Strategy</li>
+          <li>Visual Systems</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Digital & Marketing</h3>
+        <ul>
+          <li>Web & Landing Pages</li>
+          <li>Paid Ads Strategy</li>
+          <li>Social Media Creative</li>
+          <li>Performance Tracking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="container">
+    <h2>How We Work</h2>
+    <p class="lead">A focused, no-noise process designed to move your business forward.</p>
+
+    <div class="steps">
+      <div class="step"><span>01</span><br>Diagnose your business & growth gaps</div>
+      <div class="step"><span>02</span><br>Define a clear growth roadmap</div>
+      <div class="step"><span>03</span><br>Create aligned brand & assets</div>
+      <div class="step"><span>04</span><br>Execute, track & optimize</div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="container">
+    <div class="final-cta" id="contact">
+      <h2>Get a Free Growth Consultation</h2>
+      <p class="lead">Tell us about your business and we’ll get back with clear, actionable insights.</p>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="business" placeholder="Business Name" />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="WhatsApp Number" required />
+        <textarea name="message" rows="4" placeholder="Tell us about your goals"></textarea>
+        <button type="submit" class="btn btn-primary">Request Free Consultation</button>
+      </form>
+
+      <p style="margin-top:20px; color:#777;">or</p>
+
+      <a href="https://wa.me/917561806995?text=Hi%20Upward%2C%20I%E2%80%99m%20interested%20in%20a%20free%20consultation" class="btn btn-secondary btn-whatsapp">💬 Chat on WhatsApp</a>
+    </div>
+    </div>
+  </section>
+
+  <footer>
+  <p style="color:#666; font-size:0.9rem;">© 2026 Upward. Growth Consulting & Creative Agency.</p>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const business = form.business.value;
+  const email = form.email.value;
+  const phone = form.phone.value;
+  const message = form.message.value;
+
+  const text = `Free Consultation Request%0A%0AName: ${name}%0ABusiness: ${business}%0AEmail: ${email}%0AWhatsApp: ${phone}%0A%0AGoals:%0A${message}`;
+
+  window.open(`https://wa.me/917561806995?text=${text}`, '_blank');
+}
+</script>
+
+<!-- Floating WhatsApp CTA -->
+<a href="https://wa.me/917561806995?text=Hi%20Upward%2C%20I%E2%80%99m%20interested%20in%20a%20free%20consultation" class="whatsapp-float">💬 WhatsApp</a>
+
+</body>
+</html>
