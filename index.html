@@ -45,10 +45,17 @@
     }
 
     .hero-title {
-      font-size: 3.6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
       font-weight: 800;
-      margin-bottom: 24px;
-      line-height: 1.05; /* tighter so logo feels part of sentence */
+      margin-bottom: 32px;
+    }
+
+    .hero-text {
+      font-size: 2.8rem;
+      line-height: 1.1;
     }
 
           
@@ -225,10 +232,9 @@
     }
 
     .hero-logo {
-      height: 160px; /* match headline visual weight */
-      margin-top: 12px;
+      height: 260px; /* brand-first scale */
       max-width: 100%;
-      display: inline-block;
+      display: block;
     }
 
     .footer-logo {
@@ -237,10 +243,14 @@
     }
 
     @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.6rem;
-        line-height: 1.1;
+      .hero-text {
+        font-size: 2rem;
       }
+
+      .hero-logo {
+        height: 180px;
+      }
+    }
 
       .hero-logo {
         height: 110px; /* still bold on mobile */
@@ -253,7 +263,10 @@
 
   <!-- HERO -->
   <div class="container hero">
-    <h1 class="hero-title">Take your business<br><img src="./upward-logo.png" alt="Upward logo" class="hero-logo" /></h1>
+    <h1 class="hero-title">
+      <span class="hero-text">Take your business</span>
+      <img src="./upward-logo.png" alt="Upward logo" class="hero-logo" />
+    </h1>
 
     <p>We are a growth consulting and creative agency helping local and small businesses scale with strategy, clarity, and high-impact creative.</p>
     <div class="cta">
